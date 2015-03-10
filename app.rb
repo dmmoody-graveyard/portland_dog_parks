@@ -12,8 +12,13 @@ parks = [
   }
 ]
 
+configure do
+  set :root, File.dirname(__FILE__)
+  set :public_folder, 'public/app'
+end
+
 get '/' do
-  erb :index
+  File.read('public/app/index.html')
 end
 
 get '/parks' do
