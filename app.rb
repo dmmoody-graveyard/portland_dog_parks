@@ -14,6 +14,11 @@ get '/' do
   File.read('public/app/index.html')
 end
 
-get '/parks.json' do
+get '/parks' do
   JSONP parks()
+end
+
+get '/parks/1' do
+  park = parks()
+  JSONP park[1]
 end
