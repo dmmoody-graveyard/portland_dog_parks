@@ -2,15 +2,8 @@ require 'sinatra'
 require 'sinatra/reloader'
 also_reload 'lib/**/*.rb'
 require 'sinatra/jsonp'
+require './lib/parks'
 
-parks = [
-  {
-    City: "Beaverton"
-  },
-  {
-    City: "Portland"
-  }
-]
 
 configure do
   set :root, File.dirname(__FILE__)
@@ -21,6 +14,6 @@ get '/' do
   File.read('public/app/index.html')
 end
 
-get '/parks' do
-  JSONP parks
+get '/parks.json' do
+  JSONP parks()
 end

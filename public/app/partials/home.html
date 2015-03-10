@@ -1,1 +1,7 @@
 <h1 class="page-header">Portland Dog Parks</h1>
+
+<div ng-controller='dogParksCtrl'>
+  <ul class="list-unstyled lead">
+    <li ng-repeat='park in parks'>{{ park.parkName }}</li>
+  </ul>
+</div>
