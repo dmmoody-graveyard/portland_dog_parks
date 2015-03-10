@@ -5,4 +5,10 @@ dogParks.config(function($stateProvider) {
     url: "",
     templateUrl: "partials/home.html"
   });
+
+  $stateProvider.state('park', {
+    url: "/:parkID",
+    templateUrl: "partials/park.html",
+    controller: "ParksCtrl"
+  });
 });

@@ -10,10 +10,13 @@
   <script src="lib/angular-ui-router.js"></script>
   <script src="app.js"></script>
   <script src="controllers/DogParksController.js"></script>
+  <script src="controllers/ParksController.js"></script>
+  <script src="services/UtilityFactory.js"></script>
 
 </head>
 <body>
-  <div class="container">
+  <div class="container" ng-controller='dogParksCtrl'>
+    <h1 class="page-header">Portland Dog Parks</h1>
     <div ui-view></div>
   </div>
 </body>
