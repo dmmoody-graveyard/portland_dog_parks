@@ -15,8 +15,14 @@
 
 </head>
 <body>
-  <div class="container" ng-controller='dogParksCtrl'>
+  <div class="container" ng-controller="dogParksCtrl">
     <h1 class="page-header">Portland Dog Parks</h1>
+    <nav class="navbar navbar-default" role="navigation">
+      <ul class="nav navbar-nav">
+        <li><a ui-sref='home'>Home</a></li>
+        <li><a ui-sref='parks'>Dog Park List</a></li>
+      </ul>
+    </nav>
     <div ui-view></div>
   </div>
 </body>
