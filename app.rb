@@ -18,7 +18,8 @@ get '/parks' do
   JSONP parks()
 end
 
-get '/parks/1' do
+get '/parks/:id' do
+  id = params.fetch("id").to_i() - 1
   park = parks()
-  JSONP park[1]
+  JSONP park[id]
 end

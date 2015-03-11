@@ -15,6 +15,6 @@ dogParks.config(function($stateProvider) {
   $stateProvider.state('park', {
     url: "parks/:parkID",
     templateUrl: "partials/park.html",
-    controller: "ParksCtrl"
+    controller: "ParkCtrl"
   });
 });
