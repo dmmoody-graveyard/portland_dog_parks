@@ -1,5 +1,13 @@
 <div>
+  <form class="form-inline" role="form">
+    <div class="form-group">
+      <input ng-model="query" type="text" class="form-control" placeholder="Search">
+    </div>
+  </form>
+</div>
+
+<div>
   <ul class="list-unstyled lead">
-    <li ng-repeat='park in parks'><a ui-sref="park({ parkID: park.id })">{{ park.parkName }}</a></li>
+    <li ng-repeat='park in parks | filter:query'><a ui-sref="park({ parkID: park.id })">{{ park.parkName }}</a></li>
   </ul>
 </div>
